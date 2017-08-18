@@ -25,5 +25,12 @@ namespace netSpider
             }
             return myrp.GetResponseStream();
         }
+        public Stream GetBaiduPicPage_S(string key)
+        {
+            string Url="http://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gbk&word="+System.Web.HttpUtility.UrlDecode(key)+"&fr=ala&ala=2&alatpl=sp&pos=0";
+
+
+          return  getScode(Url, true, 30 * 1000, "GET", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8", "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36");
+        }
     }
 }
