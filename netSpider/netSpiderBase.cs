@@ -10,7 +10,7 @@ namespace netSpider
     public class netSpiderBase
     {
        
-        public HttpWebResponse  getResponse(string URL, bool keepAlive, int timeOut, string method, string accept, string userAgent)
+        public HttpWebResponse  getRequestResponse(string URL, bool keepAlive, int timeOut, string method, string accept, string userAgent)
         {
             HttpWebRequest mywr = (HttpWebRequest)WebRequest.Create(URL);
             mywr.KeepAlive = keepAlive;
@@ -25,6 +25,15 @@ namespace netSpider
             }else{
             	return myrp;
             }
+        }
+        public HttpWebRequest createPostRequest(string URL, bool keepAlive, int timeOut,string accept, string userAgent){
+        	HttpWebRequest mywr=(HttpWebRequest)WebRequest .Create(URL);
+        	mywr.KeepAlive = keepAlive;
+            mywr.Timeout = timeOut;
+            mywr.Method = "POST";
+            mywr.Accept = accept;
+            mywr.UserAgent = userAgent;
+            return mywr;
         }
     }
 }

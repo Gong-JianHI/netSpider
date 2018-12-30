@@ -26,12 +26,12 @@ namespace netSpider.Properties
 		{
 		}
 		public static void getStream(nsManager nsm,string url){
-			HttpWebResponse hwp=nsb.getResponse(url,nsm.Keepalive,nsm.Timeout,nsm.Method,nsm.Accept,nsm.UserAgent);
+			HttpWebResponse hwp=nsb.getRequestResponse(url,nsm.Keepalive,nsm.Timeout,nsm.Method,nsm.Accept,nsm.UserAgent);
 			nsm.streamh=hwp.GetResponseStream();
 			return;
 		}
 		public static HttpWebResponse getResponse(nsManager nsm,string url){
-			HttpWebResponse hwp=nsb.getResponse(url,nsm.Keepalive,nsm.Timeout,nsm.Method,nsm.Accept,nsm.UserAgent);
+			HttpWebResponse hwp=nsb.getRequestResponse(url,nsm.Keepalive,nsm.Timeout,nsm.Method,nsm.Accept,nsm.UserAgent);
 			return hwp;
 		}
 	}
