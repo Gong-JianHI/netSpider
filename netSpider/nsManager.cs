@@ -30,6 +30,17 @@ namespace netSpider
 		private int timeout;
 		private bool keepalive;
 		public Stream streamh;
+		string cookie;
+
+		public string Cookie {
+			get {
+				return cookie;
+			}
+			set{
+				cookie=value;
+			}
+		}
+
 		public bool Keepalive {
 			get {
 				return keepalive;
@@ -79,5 +90,11 @@ namespace netSpider
 			temp=s.ReadToEnd();
 			return temp;
 		}
+	}
+	class nsmHelp{
+		public nsmHelp() {
+			
+		}
+		
 	}
 }
