@@ -14,7 +14,7 @@ using System.Net;
 using System.IO;
 
 
-namespace netSpider.Properties
+namespace netSpider
 {
 	/// <summary>
 	/// Description of nsGet.
@@ -35,4 +35,5 @@ namespace netSpider.Properties
 			return hwp;
 		}
 	}
+	
 }

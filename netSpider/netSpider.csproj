@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="netSpiderBase.cs" />
-    <Compile Include="nsGet.cs" />
+    <Compile Include="nsNetwork.cs" />
     <Compile Include="nsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
